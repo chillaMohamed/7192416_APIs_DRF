@@ -4,17 +4,17 @@ from shop.models import Category, Product, Article
 
 class CategoryAdmin(admin.ModelAdmin):
 
-    list_display = ('name', 'active')
+    list_display = ('id', 'name', 'active')
 
 
 class ProductAdmin(admin.ModelAdmin):
 
-    list_display = ('name', 'category', 'active')
+    list_display = ('id', 'name', 'category', 'active')
 
 
 class ArticleAdmin(admin.ModelAdmin):
 
-    list_display = ('name', 'product', 'category', 'active')
+    list_display = ('id', 'name', 'product', 'category', 'active')
 
     @admin.display(description='Category')
     def category(self, obj):
