@@ -9,12 +9,12 @@ class CategoryAdmin(admin.ModelAdmin):
 
 class ProductAdmin(admin.ModelAdmin):
 
-    list_display = ('id', 'name', 'category', 'active')
+    list_display = ('id', 'name', 'category_id', 'category', 'active')
 
 
 class ArticleAdmin(admin.ModelAdmin):
 
-    list_display = ('id', 'name', 'product', 'category', 'active')
+    list_display = ('id', 'name', 'product_id', 'product', 'category', 'active')
 
     @admin.display(description='Category')
     def category(self, obj):
